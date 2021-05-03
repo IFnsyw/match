@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>火柴游戏</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body onload="loading()">
+
+    <div id="Three_lines_of_matches" class="d_flex"> </div>
+
+    <div id="choose_first_hand">
+        请先选择先手
+        <button onclick="choose_player_one()">玩家1</button>
+        <button onclick="choose_player_two()">玩家2</button>
+    </div>
+
+    <div id="players" class="d_flex">
+        <div id="player_one">
+            <div>玩家一栏目</div>
+           <div class="mt_mb_xs">
+                <label class="mt_mb_xs">请选择行数</label>
+                <select class="mt_mb_xs" id="player_one_choose_match_line" onchange="player_one_choose_line(this.value)">
+                    <option value="0"></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+           </div>
+           <div class="mt_mb_xs">
+                <label class="mt_mb_xs">请选择拾取火柴数</label>
+                <select class="mt_mb_xs" id="player_one_choose_match_number">
+                    <option value="0"></option>
+                </select>
+                <div class="mt_mb_xs">
+                    <button id="player_one_btn" onclick="player_one_pick()">确定</button>
+                </div>
+            </div>
+            <div class="mt_mb_sm">玩家一火柴数:<span id="player_one_match_number"></span></div>
+        </div>
+        <div id="referee">
+            <div class="mt_mb_xs">裁判栏目</div>
+            <div class="mt_mb_xs">
+                <button onclick="restart()">重新开始游戏</button>
+            </div>
+            <div id="referee_content"></div>
+        </div>
+        <div id="player_two">
+            <div class="mt_mb_xs">玩家二栏目</div>
+            <div class="mt_mb_xs">
+                 <label class="mt_mb_xs">请选择行数</label>
+                 <select class="mt_mb_xs" id="player_two_choose_match_line" onchange="player_two_choose_line(this.value)">
+                     <option value="0"></option>
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                 </select>
+            </div>
+            <div class="mt_mb_xs">
+                 <label class="mt_mb_xs">请选择拾取火柴数</label>
+                 <select class="mt_mb_xs" id="player_two_choose_match_number">
+                    <option value="0"></option>
+                 </select>
+                 <div class="mt_mb_xs">
+                     <button id="player_two_btn" onclick="player_two_pick()">确定</button>
+                 </div>
+             </div>
+             <div class="mt_mb_sm">玩家二火柴数<span id="player_two_match_number"></span></div>
+         </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+body{
+    background: rgb(240,240,240);
+}
+.match_img img{
+    width: 20px;
+    height: 100px;
+}
+.mt_mb_xs{
+    margin:10px 10px;
+}
+.mt_mb_sm{
+    margin:20px 10px;
+}
+.d_flex{
+    display: flex;
+}
+#Three_lines_of_matches>div{
+    width: 33%;
+    text-align: center;
+    background: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+}
+#Three_lines_of_matches>div>div:nth-child(2){
+    justify-content: center;
+}
+#players>div{
+    width: 33%;
+    text-align: center;
+}
+#player_one,#referee,#player_two{
+    margin: 10px;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+}
+#player_one>div:nth-child(1),#player_two>div:nth-child(1){
+    margin: 20px 0;
+}
+
+#referee_content>div{
+    margin: 5px 0;
+}
+#referee_content{
+    padding: 10px;
+    height: 150px;
+    overflow-y: auto;
+}
